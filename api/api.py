@@ -4,13 +4,14 @@ from pydantic import BaseModel
 import joblib
 from feature_transformer import FeatureEngineeringTransformer
 
+
 # create an instance of FASTAPI
 app = FastAPI()
 
 
 # load model components
 def load_ml_components():
-    with open("./sepsis_model_components.joblib","rb") as file:
+    with open("./models/sepsis_model_components.joblib","rb") as file:
         model_components = joblib.load(file)
     return model_components
 
@@ -60,3 +61,6 @@ async def predict_sepsis(data:SepssisFeatures):
     decoded_prediction = encoder.inverse_transform([prediction])[0]
     prediction_proba = gradient_boost_pipeline.predict_proba(df)[0].tolist()
     return {"prediction": decoded_prediction,"prediction_probability":prediction_proba}
+
+
+

@@ -1,15 +1,34 @@
-version: '3'
+version: '3.8'
+
 services:
-  api:
+  fastapi_backend:
+    image: fastapi-image:latest  
     build:
-      context: ./api
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: fastapi_backend
     ports:
-      - '80:80'
-  client:
+      - "8000:8000"
+    networks:
+      - app-network
+
+  streamlit_frontend:
+    image: streamlit-image:latest  
     build:
       context: ./frontend
+      dockerfile: Dockerfile
+    container_name: streamlit_frontend
     ports:
-      - '8501:8501'
+      - "8501:8501"
+    networks:
+      - app-network
+    depends_on:
+      - fastapi_backend
+
+networks:
+  app-network:
+    driver: bridge
+
 
       
 
