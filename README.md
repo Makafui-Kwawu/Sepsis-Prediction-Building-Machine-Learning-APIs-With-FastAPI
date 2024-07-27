@@ -234,7 +234,9 @@ This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<p> align="right">(<a href="https://medium.com/@sm.kwawu/building-machine-learning-apis-with-fastapi-embedding-machine-learning-models-for-predicting-2ca4c41e07a2">Link to Article</a>)</p>
+<p style="text-align: right;">
+    <a href="https://medium.com/@sm.kwawu/building-machine-learning-apis-with-fastapi-embedding-machine-learning-models-for-predicting-2ca4c41e07a2">Link to Article</a>
+</p>
 
 
 
