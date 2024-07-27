@@ -2,9 +2,8 @@ version: '3.8'
 
 services:
   fastapi_backend:
-    image: fastapi-image:latest  
     build:
-      context: ./backend
+      context: ./api
       dockerfile: Dockerfile
     container_name: fastapi_backend
     ports:
@@ -13,7 +12,6 @@ services:
       - app-network
 
   streamlit_frontend:
-    image: streamlit-image:latest  
     build:
       context: ./frontend
       dockerfile: Dockerfile
@@ -28,7 +26,3 @@ services:
 networks:
   app-network:
     driver: bridge
-
-
-      
-
