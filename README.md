@@ -172,7 +172,7 @@ In order to run this project, you need:
 
   ``` sh
    docker run -d --name mycontainer -p 8000:8000 pull makafuidev/sepsis_fastapi:v1.0
-   docker run -d --name mycontainer -p 8501:8501 makafuidev/sepsis_streamlit:v1
+   docker run -d --name mycontainer -p 8501:8501 pull makafuidev/sepsis_streamlit:v1
    ```
 
 ### FastAPI backend
