@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h1><b># Sepsis-Prediction-Building-Machine-Learning-APIs-With-FastAPI</b></h1>
+  <h1><b> Sepsis-Prediction-Building-Machine-Learning-APIs-With-FastAPI</b></h1>
 </div>
 
 <!-- TABLE OF CONTENTS -->
